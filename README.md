@@ -2,7 +2,7 @@
 
 ![Project Image](project-image-url)
 
->Short Project Blurb
+>Command Line Application
 
 ---
 
@@ -17,12 +17,12 @@
 ---
 
 ## Description
-What is this project about. Who is the User? What is the purpose of this application? 
+This application is designed with the user in mind. A command-line application that takes input from the user and form a professional README.md form.
 
 #### Technologies
 
-- Technology 1
-- Technology 2
+- JAVASCRIPT
+- NPM
 
 ---
 
@@ -37,18 +37,21 @@ What is this project about. Who is the User? What is the purpose of this applica
 ```html
     <p>dummy code</p>
 ```
-[Back To The Top](README-Generator)
+[Back To The Top](#README-Generator)
 
 ---
 
 ## References
+
+- GitHub - [FisherE20](https://github.com/FisherE20/README-Generator)
+- Website - [FisherE20](https://fishere20.github.io/Responsive-Portfolio/) 
+
 [Back To The Top](#README-Generator)
 
 ---
 
 ## License
 
-MIT License
 
 Copyright(c) [2020] [Erin K Fisher]
 
@@ -58,7 +61,7 @@ Copyright(c) [2020] [Erin K Fisher]
 
 ## Author Info
 
-- GitHub - [userName](url)
-- Website - [userName](url) 
+- GitHub - [FisherE20](https://github.com/FisherE20/README-Generator)
+- Website - [FisherE20](https://fishere20.github.io/Responsive-Portfolio/) 
 
 [Back To The Top](#README-Generator)
