@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const { clear } = require("console");
 
 // array of questions for user
 const questions = [
@@ -143,10 +144,11 @@ function init() {
 
             fs.writeFile('NewREADME.md', readMeInfo, (err) =>{
                 if(err){
-                    throw err
+                    console.log(err);
                 }else {
                     console.log("You have sucessfully logged your responses");
                 }
+                
             })
         })
 }

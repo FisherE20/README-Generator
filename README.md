@@ -1,6 +1,6 @@
 # README-Generator
 
-![Project Image](project-image-url)
+![Project Image](/assets/image/weather.jpg)
 
 >Command Line Application
 
