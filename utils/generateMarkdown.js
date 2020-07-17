@@ -1,9 +1,9 @@
 
 // function to generate markdown for README
-function generateMarkdown(response) {
-  return `# ${response.title}
+function generateMarkdown(data) {
+  return `# ${data.title}
   ## Description
-   ${response.description}
+   ${data.description}
   
    ---
   
@@ -19,32 +19,31 @@ function generateMarkdown(response) {
   
    #### Technologies
   
-  - JAVASCRIPT
-   ${response.technologies}
+  -  ${data.technologies}
   
  ---
   
    ## How To Use
   
    #### Installation
-   ${response.description}
+   ${data.description}
   
   
    #### API Reference
-   ${response.api}
+   ${data.api}
   
    ```
    ```
-   [Back To The Top](# ${response.title})
+   [Back To The Top](# ${data.title})
   
    ---
   
-   ## References
+   ## Questions
   
-   - GitHub - [${response.username}](https://github.com/${response.username}/${response.title})
-   - Website - [${response.username}](https://${response.username}.github.io/${response.title}/) 
+   - Email - [${data.email}](${email})
+   - Website - [${data.username}](https://${data.username}.github.io/${data.title}/) 
   
-   [Back To The Top](#${response.title})
+   [Back To The Top](#${data.title})
   
    ---
   
@@ -65,6 +64,6 @@ function generateMarkdown(response) {
 `;
 }
 
-module.exports = generateMarkdown;
+export default generateMarkdown;
 
 

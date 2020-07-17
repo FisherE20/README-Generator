@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { clear } = require("console");
+
+import generatemarkdown from "./utils/generateMarkdown.js";
 
 // array of questions for user
 const questions = [
@@ -34,11 +35,11 @@ const questions = [
         message: "How would the user install your application?"
     },
 
-    // {
-    //     type:"input",
-    //     name: "api",
-    //     message: "What API's where used in this application?"
-    // },
+    {
+        type:"input",
+        name: "api",
+        message: "What API's where used in this application?"
+    },
 
     {
         type: "input",
@@ -73,76 +74,26 @@ const questions = [
 
 
 // function to write README file
-// function writeToFile(generateMarkdown.js, responses) {
-// };
+    function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err =>{
+        if (err){
+            throw err;
+        }
+    })
+ };
 
 // function to initialize program
 function init() {
-            inquirer.prompt(questions).then((response)=>{
-                console.log(response);
+            inquirer.prompt(questions).then((answers)=>{
+                console.log(answers);
 
-                const readMeInfo =  `# ${response.title}
-                ## Description
-                 ${response.description}
-                
-                 ---
-                
-                 ### Table of Contents
-                 * [Description](#description)
-                 * [How To Use](#how to use)
-                 * [References](#references)
-                 * [License](#license)
-                 * [Contributors](#contributors)
-                 * [Author Info](#author-info)
-                
-                 ---
-                
-                 #### Technologies
-                
-                - JAVASCRIPT
-                 ${response.technologies}
-                
-               ---
-                
-                 ## How To Use
-                
-                 #### Installation
-                 ${response.description}
-                
-                
-                
-                
-                 ```
-                 ```
-                 [Back To The Top](# ${response.title})
-                
-                 ---
-                
-                 ## References
-                
-                 - GitHub - [${response.username}](https://github.com/${response.username}/${response.title})
-                 - Website - [${response.username}](https://${response.username}.github.io/${response.title}/) 
-                
-                 [Back To The Top](#${response.title})
-                
-                 ---
-                
-                 ## License
-                 ${response.license}
-                
-                 [Back To The Top](# ${response.title})
-                
-                 ---
-                
-                 ## Author Info
-                
-                 - GitHub - [${response.username}](https://github.com/${response.username}/${response.title})
-                 - Website - [${response.username}](https://${response.username}.github.io/${response.title}/) 
-                
-                [Back To The Top](# ${response.description})`
+                const response = gererateMarkDown(answers);
+                console.log(answers);
+
+            
             
 
-            fs.writeFile('NewREADME.md', readMeInfo, (err) =>{
+            fs.writeFile('NewREADME.md', generatemarkdown, (err) =>{
                 if(err){
                     console.log(err);
                 }else {
