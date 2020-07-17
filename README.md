@@ -27,16 +27,23 @@ This application is designed with the user in mind. A command-line application t
 ---
 
 ## How To Use
+To use this application , run a NPM install in your terminal, after that, if you are using node, you can use the command node index.js.
+
+```
+npm install
+
+node index.js
+```
 
 #### Installation
+
+This application runs locally, to run this application you will need to clone or download the repository.
 
 
 
 #### API Reference
+none
 
-```html
-    <p>dummy code</p>
-```
 [Back To The Top](#README-Generator)
 
 ---
