@@ -9,7 +9,7 @@ function generateMarkdown(data) {
   
    ### Table of Contents
    * [Description](#description)
-   * [How To Use](#how to use)
+   * [How To Use](#how-to-use)
    * [References](#references)
    * [Test](#test)
    * [Questions](#questions)
@@ -22,6 +22,8 @@ function generateMarkdown(data) {
    #### Technologies
   
   -  ${data.technologies}
+
+  [Back To The Top](#${data.title})
   
  ---
   
@@ -35,14 +37,14 @@ function generateMarkdown(data) {
    ${data.api}
   
    
-   [Back To The Top](# ${data.title})
+   [Back To The Top](#${data.title})
   
    ---
 
    #### Test
    ${data.test}
 
-   [Back To The Top](# ${data.title})
+   [Back To The Top](#${data.title})
 
    ---
   
@@ -58,14 +60,14 @@ function generateMarkdown(data) {
    ## License
    ${data.license}
   
-   [Back To The Top](# ${data.title})
+   [Back To The Top](#${data.title})
   
    ---
   
    ## Author Info
   
-   - GitHub - [${data.username}](https://github.com/${data.username}/${data.title})
-   - Website - [${data.username}](https://${data.username}.github.io/${data.title}/) 
+   - GitHub - [${data.github}](https://github.com/${data.github}/${data.title})
+   - Website - [${data.website}](https://${data.website}.github.io/Responsive-Portfolio/) 
   
   [Back To The Top](# ${data.title})
 
