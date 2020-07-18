@@ -11,6 +11,8 @@ function generateMarkdown(data) {
    * [Description](#description)
    * [How To Use](#how to use)
    * [References](#references)
+   * [Test](#test)
+   * [Questions](#questions)
    * [License](#license)
    * [Contributors](#contributors)
    * [Author Info](#author-info)
@@ -37,11 +39,18 @@ function generateMarkdown(data) {
    [Back To The Top](# ${data.title})
   
    ---
+
+   #### Test
+   ${data.test}
+
+   [Back To The Top](# ${data.title})
+
+   ---
   
    ## Questions
   
-   - Email - [${data.email}](${email})
-   - Website - [${data.username}](https://${data.username}.github.io/${data.title}/) 
+   - Email - [${data.email}](${data.email})
+   
   
    [Back To The Top](#${data.title})
   
@@ -64,6 +73,6 @@ function generateMarkdown(data) {
 `;
 }
 
-export default generateMarkdown;
+module.exports = generateMarkdown;
 
 

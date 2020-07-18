@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-import generatemarkdown from "./utils/generateMarkdown.js";
+const generateMarkdown = require("./utils/generateMarkdown.js") ;
 
 // array of questions for user
 const questions = [
@@ -49,6 +49,12 @@ const questions = [
 
     {
         type: "input",
+        name: "email",
+        message: "Enter your Email Address"
+    },
+
+    {
+        type: "input",
         name: "website",
         message: "Enter your Website Username"
     },
@@ -62,6 +68,12 @@ const questions = [
             "Public Domain (Unlicensed)"
         ]
     },
+
+    {
+        type: "input",
+        name: "test",
+        message: "What did you use to test your application?"
+    }
 
     {
         type: "input",
@@ -93,7 +105,7 @@ function init() {
             
             
 
-            fs.writeFile('NewREADME.md', generatemarkdown, (err) =>{
+            fs.writeFile('NewREADME.md', generateMarkdown, (err) =>{
                 if(err){
                     console.log(err);
                 }else {
