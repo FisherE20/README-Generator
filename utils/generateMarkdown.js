@@ -34,8 +34,7 @@ function generateMarkdown(data) {
    #### API Reference
    ${data.api}
   
-   ```
-   ```
+   
    [Back To The Top](# ${data.title})
   
    ---
@@ -57,22 +56,22 @@ function generateMarkdown(data) {
    ---
   
    ## License
-   ${response.license}
+   ${data.license}
   
-   [Back To The Top](# ${response.title})
+   [Back To The Top](# ${data.title})
   
    ---
   
    ## Author Info
   
-   - GitHub - [${response.username}](https://github.com/${response.username}/${response.title})
-   - Website - [${response.username}](https://${response.username}.github.io/${response.title}/) 
+   - GitHub - [${data.username}](https://github.com/${data.username}/${data.title})
+   - Website - [${data.username}](https://${data.username}.github.io/${data.title}/) 
   
-  [Back To The Top](# ${response.description})
+  [Back To The Top](# ${data.title})
 
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = {generateMarkdown: generateMarkdown};
 
 

@@ -1,7 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const {generateMarkdown} = require("./utils/generateMarkdown")
 
-const generateMarkdown = require("./utils/generateMarkdown.js") ;
+  
 
 // array of questions for user
 const questions = [
@@ -73,7 +74,7 @@ const questions = [
         type: "input",
         name: "test",
         message: "What did you use to test your application?"
-    }
+    },
 
     {
         type: "input",
@@ -96,16 +97,17 @@ const questions = [
 
 // function to initialize program
 function init() {
-            inquirer.prompt(questions).then((answers)=>{
-                console.log(answers);
+            inquirer.prompt(questions).then((data)=>{
+                console.log(data);
 
-                const response = gererateMarkDown(answers);
-                console.log(answers);
+                const response = generateMarkdown(data);
+                console.log(data);
 
             
             
 
-            fs.writeFile('NewREADME.md', generateMarkdown, (err) =>{
+
+            fs.writeFile('NewREADME.md', response, (err) =>{
                 if(err){
                     console.log(err);
                 }else {
